@@ -674,6 +674,12 @@ def main():
                 break
 
     save_state(state)
+    try:
+        subprocess.run(["git", "add", STATE_FILE], check=True)
+        subprocess.run(["git", "commit", "-m", f"chore: save state after run #{run}"], check=True)
+        commits_made += 1
+    except Exception as e:
+        pass
 
     # Summary
     applied_features = state["features_applied"]
