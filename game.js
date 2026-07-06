@@ -16,6 +16,8 @@ let isPaused = false;
 let isGameOver = false;
 let isGameStarted = false;
 
+// [VARS_MARKER]
+
 // DOM elements
 let scoreEl, highScoreEl, levelEl, startBtn, pauseBtn;
 
@@ -42,6 +44,8 @@ function init() {
     document.getElementById('instructions').textContent = CONFIG.instructionsText;
     document.getElementById('footer-text').textContent = CONFIG.footerText;
     startBtn.textContent = CONFIG.startButtonText;
+
+    // [INIT_MARKER]
 
     // Draw initial screen
     drawBackground();
@@ -79,6 +83,8 @@ function startGame() {
     startBtn.style.display = 'none';
     pauseBtn.style.display = 'inline-block';
     pauseBtn.textContent = CONFIG.pauseButtonText;
+
+    // [START_MARKER]
 
     // Start game loop
     if (gameLoop) clearInterval(gameLoop);
@@ -144,6 +150,7 @@ function gameStep() {
 
         updateScore();
         spawnFood();
+        // [FOOD_EATEN_MARKER]
     } else {
         // Remove tail
         snake.pop();
@@ -163,6 +170,7 @@ function render() {
 
     drawFood();
     drawSnake();
+    // [RENDER_MARKER]
 }
 
 // Draw background
@@ -253,6 +261,7 @@ function gameOver() {
     isGameOver = true;
     isGameStarted = false;
     clearInterval(gameLoop);
+    // [GAME_OVER_MARKER]
 
     // Update high score
     if (score > highScore) {
@@ -332,6 +341,8 @@ function updateScore() {
     scoreEl.textContent = score;
     levelEl.textContent = level;
 }
+
+// [FUNCTIONS_MARKER]
 
 // Initialize on page load
 window.addEventListener('load', init);

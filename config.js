@@ -42,5 +42,7 @@ const CONFIG = {
     pauseButtonText: "Pause",
     resumeButtonText: "Resume",
     instructionsText: "Use arrow keys or WASD to move",
-    footerText: "Built with ❤️ | Version 1.0.0"
+    footerText: "Built with ❤️ | Version 1.0.0",
+
+    // [CONFIG_MARKER]
 };
