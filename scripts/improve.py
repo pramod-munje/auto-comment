@@ -7,13 +7,20 @@ At scheduled milestones: real new features are added to the game.
 Features are spread out over hours to look like natural development.
 """
 
+import io
 import json
 import os
 import random
 import re
 import subprocess
+import sys
 import time
 from datetime import datetime, timezone
+
+# Fix encoding for Windows terminals
+if sys.stdout.encoding != 'utf-8':
+    sys.stdout = io.TextIOWrapper(sys.stdout.buffer, encoding='utf-8', errors='replace')
+    sys.stderr = io.TextIOWrapper(sys.stderr.buffer, encoding='utf-8', errors='replace')
 
 COMMITS_PER_RUN = 10
 DELAY_BETWEEN = 25  # seconds
