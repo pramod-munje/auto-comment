@@ -1,0 +1,144 @@
+/* Snake Game Styles — v1.0.0 */
+/* Color Scheme: Dark Mode */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-card: #1a1a2e;
+    --text-primary: #e0e0e0;
+    --text-secondary: #8888aa;
+    --accent-primary: #00d4aa;
+    --accent-secondary: #7c3aed;
+    --border-color: #2a2a3e;
+    --danger-color: #ef4444;
+    --food-color: #ef4444;
+    --snake-color: #00d4aa;
+    --snake-head-color: #00ffcc;
+    --canvas-bg: #0d0d15;
+    --grid-color: #15151f;
+    --font-family: 'Inter', sans-serif;
+    --border-radius: 12px;
+    --shadow-glow: 0 0 20px rgba(0, 212, 170, 0.15);
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    font-family: var(--font-family);
+    overflow: hidden;
+}
+
+.game-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 24px;
+    background: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-glow);
+}
+
+.game-header {
+    text-align: center;
+}
+
+.game-header h1 {
+    font-size: 28px;
+    font-weight: 700;
+    color: var(--accent-primary);
+    margin-bottom: 4px;
+}
+
+.game-header p {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+.score-board {
+    display: flex;
+    gap: 24px;
+    padding: 12px 24px;
+    background: var(--bg-card);
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.score-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.score-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--text-secondary);
+}
+
+.score-value {
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--accent-primary);
+}
+
+canvas {
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--canvas-bg);
+}
+
+.controls-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.controls-info p {
+    font-size: 13px;
+    color: var(--text-secondary);
+}
+
+button {
+    padding: 10px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: var(--font-family);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: var(--accent-primary);
+    color: var(--bg-primary);
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+.game-footer {
+    text-align: center;
+    padding-top: 8px;
+}
+
+.game-footer p {
+    font-size: 12px;
+    color: var(--text-secondary);
+}
