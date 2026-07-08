@@ -1,5 +1,7 @@
 {
-  "total_runs": 23,
-  "features_applied": [],
+  "total_runs": 24,
+  "features_applied": [
+    "food_glow"
+  ],
   "tweaks_applied": 0
 }
