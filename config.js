@@ -44,5 +44,9 @@ const CONFIG = {
     instructionsText: "Use arrow keys or WASD to move",
     footerText: "Built with ❤️ | Version 1.0.12",
 
+    // Food glow effect
+    foodGlow: true,
+    foodGlowIntensity: 15,
+
     // [CONFIG_MARKER]
 };
