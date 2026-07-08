@@ -45,6 +45,18 @@ function init() {
     document.getElementById('footer-text').textContent = CONFIG.footerText;
     startBtn.textContent = CONFIG.startButtonText;
 
+    // Override drawFood to add glow effect
+    const _origDrawFood = drawFood;
+    drawFood = function() {
+        if (CONFIG.foodGlow) {
+            ctx.shadowColor = CONFIG.foodColor;
+            ctx.shadowBlur = CONFIG.foodGlowIntensity;
+        }
+        _origDrawFood();
+        ctx.shadowColor = 'transparent';
+        ctx.shadowBlur = 0;
+    };
+
     // [INIT_MARKER]
 
     // Draw initial screen
