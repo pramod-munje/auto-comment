@@ -3,7 +3,7 @@
 
 const CONFIG = {
     // Version
-    version: "1.0.16",
+    version: "1.0.17",
 
     // Canvas settings
     canvasWidth: 400,
@@ -42,7 +42,7 @@ const CONFIG = {
     pauseButtonText: "Pause",
     resumeButtonText: "Resume",
     instructionsText: "Use arrow keys or WASD to move",
-    footerText: "Built with ❤️ | Version 1.0.16",
+    footerText: "Built with ❤️ | Version 1.0.17",
 
     // Food glow effect
     foodGlow: true,
