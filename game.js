@@ -57,6 +57,22 @@ function init() {
         ctx.shadowBlur = 0;
     };
 
+    // Override drawSnake for rounded segments
+    const _origDrawSnake = drawSnake;
+    drawSnake = function() {
+        if (CONFIG.roundedSegments && ctx.roundRect) {
+            const gs = CONFIG.gridSize;
+            snake.forEach((seg, i) => {
+                ctx.fillStyle = i === 0 ? CONFIG.snakeHeadColor : CONFIG.snakeColor;
+                ctx.beginPath();
+                ctx.roundRect(seg.x * gs + 1, seg.y * gs + 1, gs - 2, gs - 2, CONFIG.segmentRadius);
+                ctx.fill();
+            });
+        } else {
+            _origDrawSnake();
+        }
+    };
+
     // [INIT_MARKER]
 
     // Draw initial screen
