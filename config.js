@@ -48,5 +48,9 @@ const CONFIG = {
     foodGlow: true,
     foodGlowIntensity: 15,
 
+    // Rounded snake segments
+    roundedSegments: true,
+    segmentRadius: 4,
+
     // [CONFIG_MARKER]
 };
