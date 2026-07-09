@@ -1,7 +1,8 @@
 {
-  "total_runs": 41,
+  "total_runs": 42,
   "features_applied": [
-    "food_glow"
+    "food_glow",
+    "rounded_snake"
   ],
   "tweaks_applied": 0
 }
