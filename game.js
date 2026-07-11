@@ -16,7 +16,10 @@ let isPaused = false;
 let isGameOver = false;
 let isGameStarted = false;
 
-// [VARS_MARKER]
+// Score popup animation
+let scorePopups = [];
+
+    // [VARS_MARKER]
 
 // DOM elements
 let scoreEl, highScoreEl, levelEl, startBtn, pauseBtn;
