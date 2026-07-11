@@ -181,7 +181,11 @@ function gameStep() {
 
         updateScore();
         spawnFood();
-        // [FOOD_EATEN_MARKER]
+        if (typeof createScorePopup === 'function') {
+            createScorePopup(head.x, head.y, points);
+        }
+
+    // [FOOD_EATEN_MARKER]
     } else {
         // Remove tail
         snake.pop();
@@ -201,6 +205,8 @@ function render() {
 
     drawFood();
     drawSnake();
+    if (typeof drawScorePopups === 'function') drawScorePopups();
+
     // [RENDER_MARKER]
 }
 
