@@ -373,7 +373,34 @@ function updateScore() {
     levelEl.textContent = level;
 }
 
-// [FUNCTIONS_MARKER]
+// Create floating score popup
+function createScorePopup(x, y, points) {
+    scorePopups.push({
+        x: x * CONFIG.gridSize + CONFIG.gridSize / 2,
+        y: y * CONFIG.gridSize,
+        text: '+' + points,
+        alpha: 1.0,
+        velocity: -2
+    });
+}
+
+// Draw and update score popups
+function drawScorePopups() {
+    scorePopups = scorePopups.filter(p => p.alpha > 0);
+    scorePopups.forEach(p => {
+        ctx.save();
+        ctx.globalAlpha = p.alpha;
+        ctx.fillStyle = CONFIG.accent || '#00d4aa';
+        ctx.font = 'bold 16px Inter, sans-serif';
+        ctx.textAlign = 'center';
+        ctx.fillText(p.text, p.x, p.y);
+        ctx.restore();
+        p.y += p.velocity;
+        p.alpha -= 0.03;
+    });
+}
+
+    // [FUNCTIONS_MARKER]
 
 // Initialize on page load
 window.addEventListener('load', init);
