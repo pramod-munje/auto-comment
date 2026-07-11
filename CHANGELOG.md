@@ -1,6 +1,11 @@
 # Changelog
 
 All notable changes to this Snake Game project will be documented in this file.
+## [2026-07-11 08:23 UTC]
+
+### Added
+- Added floating score popup animation when collecting food
+
 ## [2026-07-09 20:16 UTC]
 
 ### Added
