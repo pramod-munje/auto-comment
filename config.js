@@ -18,7 +18,7 @@ const CONFIG = {
 
     // Scoring
     pointsPerFood: 20,
-    levelUpScore: 40,
+    levelUpScore: 50,
     scoreMultiplier: 1.1,
 
     // Game behavior
