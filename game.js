@@ -188,6 +188,10 @@ function gameStep() {
             createScorePopup(head.x, head.y, points);
         }
 
+    if (typeof createParticles === 'function') {
+            createParticles(head.x, head.y, CONFIG.foodColor);
+        }
+
     // [FOOD_EATEN_MARKER]
     } else {
         // Remove tail
@@ -209,6 +213,8 @@ function render() {
     drawFood();
     drawSnake();
     if (typeof drawScorePopups === 'function') drawScorePopups();
+
+    if (typeof drawParticles === 'function') drawParticles();
 
     // [RENDER_MARKER]
 }
