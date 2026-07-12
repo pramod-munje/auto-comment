@@ -52,5 +52,10 @@ const CONFIG = {
     roundedSegments: true,
     segmentRadius: 4,
 
+    // Particle effects
+    particlesEnabled: true,
+    particleCount: 8,
+    particleSpeed: 3,
+
     // [CONFIG_MARKER]
 };

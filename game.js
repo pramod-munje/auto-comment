@@ -19,6 +19,9 @@ let isGameStarted = false;
 // Score popup animation
 let scorePopups = [];
 
+    // Particle system
+let particles = [];
+
     // [VARS_MARKER]
 
 // DOM elements
