@@ -1,6 +1,11 @@
 # Changelog
 
 All notable changes to this Snake Game project will be documented in this file.
+## [2026-07-12 16:12 UTC]
+
+### Added
+- Added particle burst effect when snake eats food
+
 ## [2026-07-11 08:23 UTC]
 
 ### Added
