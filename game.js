@@ -409,6 +409,41 @@ function drawScorePopups() {
     });
 }
 
+    // Create particle burst at position
+function createParticles(x, y, color) {
+    if (!CONFIG.particlesEnabled) return;
+    const count = CONFIG.particleCount || 8;
+    for (let i = 0; i < count; i++) {
+        const angle = (Math.PI * 2 / count) * i;
+        const speed = CONFIG.particleSpeed || 3;
+        particles.push({
+            x: x * CONFIG.gridSize + CONFIG.gridSize / 2,
+            y: y * CONFIG.gridSize + CONFIG.gridSize / 2,
+            vx: Math.cos(angle) * speed * (0.5 + Math.random()),
+            vy: Math.sin(angle) * speed * (0.5 + Math.random()),
+            size: 3 + Math.random() * 3,
+            alpha: 1.0,
+            color: color || CONFIG.foodColor
+        });
+    }
+}
+
+// Update and draw particles
+function drawParticles() {
+    particles = particles.filter(p => p.alpha > 0);
+    particles.forEach(p => {
+        ctx.save();
+        ctx.globalAlpha = p.alpha;
+        ctx.fillStyle = p.color;
+        ctx.fillRect(p.x - p.size / 2, p.y - p.size / 2, p.size, p.size);
+        ctx.restore();
+        p.x += p.vx;
+        p.y += p.vy;
+        p.alpha -= 0.04;
+        p.size *= 0.97;
+    });
+}
+
     // [FUNCTIONS_MARKER]
 
 // Initialize on page load
