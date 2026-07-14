@@ -37,7 +37,7 @@ const CONFIG = {
     // UI text
     gameTitle: "🐍 Snake Arcade",
     gameSubtitle: "How long can you last?",
-    gameOverText: "Try Again!",
+    gameOverText: "You Crashed!",
     startButtonText: "Start Game",
     pauseButtonText: "Pause",
     resumeButtonText: "Resume",
