@@ -79,6 +79,10 @@ function init() {
         }
     };
 
+    // Set up touch controls
+    canvas.addEventListener('touchstart', handleTouchStart, { passive: true });
+    canvas.addEventListener('touchend', handleTouchEnd, { passive: true });
+
     // [INIT_MARKER]
 
     // Draw initial screen
