@@ -450,6 +450,32 @@ function drawParticles() {
     });
 }
 
+    // Touch controls for mobile
+let touchStartX = 0;
+let touchStartY = 0;
+
+function handleTouchStart(e) {
+    const touch = e.touches[0];
+    touchStartX = touch.clientX;
+    touchStartY = touch.clientY;
+}
+
+function handleTouchEnd(e) {
+    if (!isGameStarted) return;
+    const touch = e.changedTouches[0];
+    const dx = touch.clientX - touchStartX;
+    const dy = touch.clientY - touchStartY;
+    const minSwipe = 30;
+    
+    if (Math.abs(dx) > Math.abs(dy)) {
+        if (dx > minSwipe && direction.x === 0) nextDirection = { x: 1, y: 0 };
+        else if (dx < -minSwipe && direction.x === 0) nextDirection = { x: -1, y: 0 };
+    } else {
+        if (dy > minSwipe && direction.y === 0) nextDirection = { x: 0, y: 1 };
+        else if (dy < -minSwipe && direction.y === 0) nextDirection = { x: 0, y: -1 };
+    }
+}
+
     // [FUNCTIONS_MARKER]
 
 // Initialize on page load
