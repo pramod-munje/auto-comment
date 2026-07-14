@@ -1,6 +1,11 @@
 # Changelog
 
 All notable changes to this Snake Game project will be documented in this file.
+## [2026-07-14 09:44 UTC]
+
+### Added
+- Added touch swipe controls for mobile gameplay
+
 ## [2026-07-12 16:12 UTC]
 
 ### Added
