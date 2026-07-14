@@ -1,10 +1,11 @@
 {
-  "total_runs": 107,
+  "total_runs": 108,
   "features_applied": [
     "food_glow",
     "rounded_snake",
     "score_popup",
-    "particles"
+    "particles",
+    "touch_controls"
   ],
   "tweaks_applied": 0
 }
