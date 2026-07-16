@@ -83,6 +83,13 @@ function init() {
     canvas.addEventListener('touchstart', handleTouchStart, { passive: true });
     canvas.addEventListener('touchend', handleTouchEnd, { passive: true });
 
+    // Override updateScore to also update speed
+    const _origUpdateScore = updateScore;
+    updateScore = function() {
+        _origUpdateScore();
+        if (typeof updateSpeedDisplay === 'function') updateSpeedDisplay();
+    };
+
     // [INIT_MARKER]
 
     // Draw initial screen
@@ -477,6 +484,15 @@ function handleTouchEnd(e) {
     } else {
         if (dy > minSwipe && direction.y === 0) nextDirection = { x: 0, y: 1 };
         else if (dy < -minSwipe && direction.y === 0) nextDirection = { x: 0, y: -1 };
+    }
+}
+
+    // Update speed display
+function updateSpeedDisplay() {
+    const speedEl = document.getElementById('speed-display');
+    if (speedEl && gameSpeed) {
+        const ratio = CONFIG.initialSpeed / gameSpeed;
+        speedEl.textContent = ratio.toFixed(1) + 'x';
     }
 }
 
