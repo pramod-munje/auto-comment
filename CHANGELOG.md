@@ -1,6 +1,11 @@
 # Changelog
 
 All notable changes to this Snake Game project will be documented in this file.
+## [2026-07-16 18:06 UTC]
+
+### Added
+- Added real-time speed indicator to the scoreboard
+
 ## [2026-07-14 09:44 UTC]
 
 ### Added
