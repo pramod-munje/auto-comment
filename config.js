@@ -57,5 +57,9 @@ const CONFIG = {
     particleCount: 8,
     particleSpeed: 3,
 
+    // Snake gradient
+    snakeGradient: true,
+    snakeTailColor: "#065f46",
+
     // [CONFIG_MARKER]
 };
