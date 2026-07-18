@@ -1,6 +1,11 @@
 # Changelog
 
 All notable changes to this Snake Game project will be documented in this file.
+## [2026-07-18 19:48 UTC]
+
+### Added
+- Added gradient color effect along the snake body
+
 ## [2026-07-16 18:06 UTC]
 
 ### Added
