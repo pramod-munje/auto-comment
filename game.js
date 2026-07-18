@@ -90,6 +90,29 @@ function init() {
         if (typeof updateSpeedDisplay === 'function') updateSpeedDisplay();
     };
 
+    // Override drawSnake for gradient body
+    const _gradDrawSnake = drawSnake;
+    drawSnake = function() {
+        if (CONFIG.snakeGradient && snake.length > 1) {
+            const gs = CONFIG.gridSize;
+            const headColor = CONFIG.snakeHeadColor || '#00ffcc';
+            const tailColor = CONFIG.snakeTailColor || '#065f46';
+            snake.forEach((seg, i) => {
+                const t = i / (snake.length - 1);
+                ctx.fillStyle = i === 0 ? headColor : lerpColor(CONFIG.snakeColor, tailColor, t);
+                if (CONFIG.roundedSegments && ctx.roundRect) {
+                    ctx.beginPath();
+                    ctx.roundRect(seg.x * gs + 1, seg.y * gs + 1, gs - 2, gs - 2, CONFIG.segmentRadius || 4);
+                    ctx.fill();
+                } else {
+                    ctx.fillRect(seg.x * gs + 1, seg.y * gs + 1, gs - 2, gs - 2);
+                }
+            });
+        } else {
+            _gradDrawSnake();
+        }
+    };
+
     // [INIT_MARKER]
 
     // Draw initial screen
@@ -494,6 +517,18 @@ function updateSpeedDisplay() {
         const ratio = CONFIG.initialSpeed / gameSpeed;
         speedEl.textContent = ratio.toFixed(1) + 'x';
     }
+}
+
+    // Interpolate between two hex colors
+function lerpColor(a, b, t) {
+    const ah = parseInt(a.replace('#', ''), 16);
+    const bh = parseInt(b.replace('#', ''), 16);
+    const ar = (ah >> 16) & 0xff, ag = (ah >> 8) & 0xff, ab = ah & 0xff;
+    const br = (bh >> 16) & 0xff, bg = (bh >> 8) & 0xff, bb = bh & 0xff;
+    const rr = Math.round(ar + (br - ar) * t);
+    const rg = Math.round(ag + (bg - ag) * t);
+    const rb = Math.round(ab + (bb - ab) * t);
+    return '#' + ((1 << 24) + (rr << 16) + (rg << 8) + rb).toString(16).slice(1);
 }
 
     // [FUNCTIONS_MARKER]
