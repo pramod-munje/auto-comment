@@ -11,7 +11,7 @@ const CONFIG = {
     gridSize: 20,
 
     // Snake settings
-    initialSpeed: 160,
+    initialSpeed: 150,
     speedIncrement: 5,
     minSpeed: 55,
     initialLength: 3,
