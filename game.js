@@ -531,6 +531,29 @@ function lerpColor(a, b, t) {
     return '#' + ((1 << 24) + (rr << 16) + (rg << 8) + rb).toString(16).slice(1);
 }
 
+    // Screen shake effect
+function triggerScreenShake() {
+    if (!CONFIG.screenShake) return;
+    const wrapper = document.querySelector('.game-wrapper');
+    if (!wrapper) return;
+    const intensity = CONFIG.shakeIntensity || 5;
+    const duration = CONFIG.shakeDuration || 300;
+    const start = Date.now();
+    function shakeFrame() {
+        const elapsed = Date.now() - start;
+        if (elapsed < duration) {
+            const decay = 1 - elapsed / duration;
+            const dx = (Math.random() - 0.5) * intensity * 2 * decay;
+            const dy = (Math.random() - 0.5) * intensity * 2 * decay;
+            wrapper.style.transform = 'translate(' + dx + 'px, ' + dy + 'px)';
+            requestAnimationFrame(shakeFrame);
+        } else {
+            wrapper.style.transform = '';
+        }
+    }
+    shakeFrame();
+}
+
     // [FUNCTIONS_MARKER]
 
 // Initialize on page load
