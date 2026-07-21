@@ -1,6 +1,11 @@
 # Changelog
 
 All notable changes to this Snake Game project will be documented in this file.
+## [2026-07-21 06:19 UTC]
+
+### Added
+- Added screen shake effect when snake crashes
+
 ## [2026-07-18 19:48 UTC]
 
 ### Added
