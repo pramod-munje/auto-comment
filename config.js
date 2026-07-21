@@ -61,5 +61,10 @@ const CONFIG = {
     snakeGradient: true,
     snakeTailColor: "#065f46",
 
+    // Screen shake on death
+    screenShake: true,
+    shakeIntensity: 5,
+    shakeDuration: 300,
+
     // [CONFIG_MARKER]
 };
