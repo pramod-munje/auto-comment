@@ -1,5 +1,5 @@
 {
-  "total_runs": 215,
+  "total_runs": 216,
   "features_applied": [
     "food_glow",
     "rounded_snake",
@@ -7,7 +7,8 @@
     "particles",
     "touch_controls",
     "speed_display",
-    "snake_gradient"
+    "snake_gradient",
+    "screen_shake"
   ],
   "tweaks_applied": 0
 }
