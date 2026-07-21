@@ -341,6 +341,8 @@ function gameOver() {
     isGameOver = true;
     isGameStarted = false;
     clearInterval(gameLoop);
+    if (typeof triggerScreenShake === 'function') triggerScreenShake();
+
     // [GAME_OVER_MARKER]
 
     // Update high score
