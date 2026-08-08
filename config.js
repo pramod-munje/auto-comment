@@ -31,7 +31,7 @@ const CONFIG = {
     snakeColor: "#00d4aa",
     snakeHeadColor: "#bbf7d0",
     foodColor: "#f43f5e",
-    backgroundColor: "#0d0d15",
+    backgroundColor: "#111118",
     gridColor: "#15151f",
 
     // UI text
