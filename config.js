@@ -35,7 +35,7 @@ const CONFIG = {
     gridColor: "#15151f",
 
     // UI text
-    gameTitle: "🐍 Snake Challenge",
+    gameTitle: "🐍 Snake Master",
     gameSubtitle: "A classic arcade experience",
     gameOverText: "Game Over!",
     startButtonText: "Start Game",
