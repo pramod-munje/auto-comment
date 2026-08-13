@@ -19,7 +19,7 @@ const CONFIG = {
     // Scoring
     pointsPerFood: 15,
     levelUpScore: 40,
-    scoreMultiplier: 1.1,
+    scoreMultiplier: 1.5,
 
     // Game behavior
     wallCollision: true,
