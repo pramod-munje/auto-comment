@@ -30,7 +30,7 @@ const CONFIG = {
     // Visual settings
     snakeColor: "#34d399",
     snakeHeadColor: "#bbf7d0",
-    foodColor: "#fb923c",
+    foodColor: "#f97316",
     backgroundColor: "#0c0c14",
     gridColor: "#15151f",
 
