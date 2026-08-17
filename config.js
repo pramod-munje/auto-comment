@@ -28,7 +28,7 @@ const CONFIG = {
     showParticles: false,
 
     // Visual settings
-    snakeColor: "#059669",
+    snakeColor: "#6ee7b7",
     snakeHeadColor: "#86efac",
     foodColor: "#fb923c",
     backgroundColor: "#0c0c14",
