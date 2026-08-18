@@ -13,7 +13,7 @@ const CONFIG = {
     // Snake settings
     initialSpeed: 130,
     speedIncrement: 8,
-    minSpeed: 60,
+    minSpeed: 50,
     initialLength: 2,
 
     // Scoring
