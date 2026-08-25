@@ -14,7 +14,7 @@ const CONFIG = {
     initialSpeed: 160,
     speedIncrement: 8,
     minSpeed: 60,
-    initialLength: 3,
+    initialLength: 4,
 
     // Scoring
     pointsPerFood: 15,
