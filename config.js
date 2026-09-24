@@ -24,7 +24,7 @@ const CONFIG = {
     // Game behavior
     wallCollision: true,
     selfCollision: true,
-    showGrid: true,
+    showGrid: false,
     showParticles: false,
 
     // Visual settings
