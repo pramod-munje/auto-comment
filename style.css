@@ -26,7 +26,7 @@
     --grid-color: #15151f;
     --font-family: 'Inter', sans-serif;
     --border-radius: 12px;
-    --shadow-glow: 0 0 30px rgba(0, 212, 170, 0.15);
+    --shadow-glow: 0 0 20px rgba(0, 212, 170, 0.15);
 }
 
 body {
